@@ -8,6 +8,25 @@ def multiply(A, B, m, n):
 
     return prod
 
+
+def add(A,B,m,n):
+    size= max(m,n)
+    sum=[0 for i in range(size)]
+    for i in range(0,m,1):
+        sum[i]=A[i]
+    for i in range(n):
+        sum[i]+=B[i]
+    return sum
+
+def minus(A,B,m,n):
+    size= max(m,n)
+    sum=[0 for i in range(size)]
+    for i in range(0,m,1):
+        sum[i]=A[i]
+    for i in range(n):
+        sum[i]-=B[i]
+    return sum
+
 ##########print polynomial
 
 
@@ -41,6 +60,8 @@ print(B)
 
 m = len(A)
 n = len(B)
+size=max(m,n)
+
 
 print("First polynomial is ")
 printPoly(A, m)
@@ -51,5 +72,17 @@ prod = multiply(A, B, m, n)
 
 print("\nProduct polynomial is ")
 printPoly(prod, m + n - 1)
+print('\n')
+ADD=add(A,B,m,n)
+
+Minus=minus(A,B,m,n)
+print('\n')
+print('Addition of two polynomial:')
+
+printPoly(ADD,size)
+print('\n')
+print('Subtraction of two polynomial:')
+printPoly(Minus,size)
+
 
 
