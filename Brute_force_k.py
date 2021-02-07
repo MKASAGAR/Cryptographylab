@@ -4,9 +4,9 @@
 cipher =input('Enter the Cipher Text:')
 
 if cipher.isupper():
-    L='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    LETTERS='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 else:
-    L='abcdefghijklmnopqrstuvwxyz'
+    LETTERS='abcdefghijklmnopqrstuvwxyz'
 
 for key in range(len(L)):
     message=''
