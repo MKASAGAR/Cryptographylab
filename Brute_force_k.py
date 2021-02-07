@@ -1,9 +1,4 @@
-message = input("Enter Cipher: ")
 
-if message.isupper():
-    LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-else:
-    LETTERS="abcdefghijklmnopqrstuvwxyz"
 
 
 cipher =input('Enter the Cipher Text:')
