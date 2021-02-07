@@ -61,5 +61,8 @@ for ch in cipher:
 
 print(cipher_string)
 
+for i in range(math.ceil(msg_len/key_len)):
+    for j in range(len(key_list)):
+        print(message_matrix[i][j],end='')
 
 
