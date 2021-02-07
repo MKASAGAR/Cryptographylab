@@ -1,4 +1,19 @@
+def encrypt(string, shift):
+    cipher = ''
+    for char in string:
+        if char == ' ':
+            cipher = cipher + char
+        elif char.isupper():
+            cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
+        else:
+            cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
+    return cipher
 
+text = input("Enter string: ")
+s = int(input("Enter shift number: "))
+print("Original string: ", text)
+plain=encrypt(text,s)
+print("After encryption: ", encrypt(text, s))
 
 
 cipher =input('Enter the Cipher Text:')
@@ -8,22 +23,11 @@ if cipher.isupper():
 else:
     LETTERS='abcdefghijklmnopqrstuvwxyz'
 
-for key in range(len(L)):
-    message=''
-    for symbol in cipher:
-        if symbol in L:
-            loc = L.find(symbol)
-            loc=loc-key
-            if loc <0:
-                loc=loc+26
-            message=message+L[loc]
-        else:
-            message=message+symbol
-    print('key value: %s Decrypted message: %s'%(key,message))
+
 
 for key in range(len(LETTERS)):
     translated = ''
-    for symbol in message:
+    for symbol in cipher:
         if symbol in LETTERS:
             num = LETTERS.find(symbol)
             num = num - key
