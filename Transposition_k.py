@@ -58,9 +58,9 @@ cipher_string=''
 for ch in cipher:
     cipher_string=cipher_string+ch
 
-
+print('The cipher Text:')
 print(cipher_string)
-
+print('Decryption Message:')
 for i in range(math.ceil(msg_len/key_len)):
     for j in range(len(key_list)):
         print(message_matrix[i][j],end='')
